@@ -2,20 +2,19 @@
 /* FIXME: */
 
 :root {
+	--color-accent: #ff3400;
+	--color-body: #918ca4;
+	--color-heading: #1b0760;
 	--color-primary: #2584ff;
 	--color-secondary: #00d9ff;
-	--color-accent: #ff3400;
-	--color-heading: #1b0760;
-	--color-body: #918ca4;
-	/* --font-heading: "Inter", sans-serif; */
 }
 
 *,
 *::after,
 *::before {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 
 /* Typography */
@@ -164,4 +163,66 @@ a {
 	height: 64px;
 	border-radius: 100%;
 	background-color: #f3f9fa;
+}
+
+/* Buttons */
+.btn {
+	border-radius: 40px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.8rem;
+	font-weight: 600;
+	margin: 1rem 0;
+	outline: none;
+	padding: 2rem 3rem;
+	text-align: center;
+	text-transform: uppercase;
+	white-space: nowrap;
+	transition: all 0.2s;
+}
+
+.btn--primary {
+	background-color: var(--color-primary);
+}
+.btn--primary:hover {
+	background-color: #3a8ffd;
+}
+
+.btn--secondary {
+	background-color: var(--color-secondary);
+}
+
+.btn--secondary:hover {
+	background-color: #00c8eb;
+}
+
+.btn--accent {
+	background-color: var(--color-accent);
+}
+
+.btn--accent:hover {
+	background-color: #ec3000;
+}
+
+.btn--block {
+	width: 100%;
+}
+
+.btn--outline {
+	color: var(--color-heading);
+	border: 2px solid var(--color-heading);
+	background-color: #fff;
+}
+
+.btn--outline:hover {
+	background-color: var(--color-heading);
+	color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+	.btn {
+		font-size: 1.5rem;
+	}
 }
